@@ -1,0 +1,303 @@
+@charset "utf-8";
+
+/* main{} */
+
+.main_visual{
+  position: relative;
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+  height: 100vh;  /*높이 상대단위*/
+}
+.main_visual .swiper{
+  width: 100%; height: 100%;
+}
+.main_visual img{
+  display: block;
+  width: 100%;
+}
+.main_visual>h2{display: none;}
+
+#cont1, #cont2, #cont3, #cont4, #cont5{
+  width: 1200px;
+  /* height: 700px; */
+  margin: 20px auto;
+  /* background-color: #ccc; */
+  padding: 40px 0px;
+}
+#cont2{width: 100%; background-color: #EFEFEF;}
+/* html, body{
+  scroll-behavior: smooth;
+} */
+
+/* 2콘텐츠 파스쿠치 스토리 */
+#cont1{padding:30px 0px;}
+.c_title{
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: bold;
+}
+.sub_title{
+  font-size:16px;
+  font-family: '바탕체', sans-serif;
+  padding-bottom: 50px;
+}
+.c_title, .sub_title, .tab_menu{
+  text-align: center;
+}
+
+.tab_menu .menu_btn{
+  display: inline-block;
+  width: 100px;
+  padding: 6px 0px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #211613;
+  color:#FAF9F9;
+  margin: 0px 10px 40px 10px;
+}
+.tab_menu > input[type=radio]{display: none;}
+.tab_menu > input[type=radio]:checked + .menu_btn{
+  background-color: #ff0000;
+}
+#tab_01:checked ~ .season_m{
+  display: block;
+}
+#tab_02:checked ~ .hit_m{
+  display: block;
+}
+.h_up{
+  height: 300px;
+  /* background-color: #211613; */
+}
+/* 스와이퍼 슬라이드 */
+.season_m{display: none;}
+
+.mySwiper2{position: relative;}
+.mySwiper2 figure{
+  width: 220px;height: 250px;
+  margin: 0 auto;
+}
+.mySwiper2 figure img{width: 100%;}
+
+/* 인기메뉴 슬라이드 서식 */
+.hit_m{display: none;}
+
+/* 메뉴명 서식, 가격서식 */
+.product_price{font-weight: bold; font-size: 16px;}
+/* 더보기 버튼 */
+.more_btn a{
+  display: block;
+  width: 130px;
+  line-height: 30px;
+  background-color: #FAF9F9;
+  text-align: center;
+  margin: 70px auto 40px auto;
+  border: 1px solid#333;
+  font-size: 14px;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.more_btn a:hover{
+  color:#FAF9F9;
+  background-color: #E41937;
+  border: 1px solid #E41937;
+}
+
+/* 이벤트 슬라이드  서식 */
+.e_box{
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  /* height: 250px; */
+  /* background-color: #211613; */
+}
+.swiper3-slide{
+  /* background-color: #211613; */
+  height: 200px;
+  text-align: center;
+}
+.swiper3-slide > a img{
+  width: 330px;
+  margin: 0 10px;
+  transform: translateY(-60px);
+  transition: 0.5s;
+}
+.swiper3-slide > a:hover img{
+  filter: brightness(80%);
+}
+.swiper3-slide > a:last-child img{
+  transform: translateY(-120px);
+}
+.swiper-pagination-bullet{
+  background-color: #E41937;
+  transition: 0.5s;
+  width: 16px;
+  height: 16px;
+}
+.swiper-button-next, .swiper-button-prev{color:#E41937;}
+#cont2 .swiper-button-next, #cont2 .swiper-button-prev{
+  position: absolute;
+  top: 100px;
+}
+#cont2 .swiper-pagination{
+  position: absolute;
+  bottom: -40px;
+  left: 0px;
+}
+.l_txt{
+  position: absolute;
+  left: -10000px;
+}
+.swiper-pagination-bullet-active{
+  transition: 0.5s;
+  padding-right: 50px;
+  border-radius: 30px;
+}
+/* 뉴스 서식 */
+
+#g_wrap{
+  display: grid;
+  width: 1200px;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2, 200px);
+  grid-gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#g_wrap > li{
+  background-color: #EFEFEF;
+  position: relative;
+}
+
+/* 이미지 크기 */
+#g_wrap .img_box{
+  width: 170px;height: 170px;
+  background-color: #211613;
+  overflow: hidden;
+}
+#g_wrap > li > a > figure img{
+  width: 100%;height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+#g_wrap > li > a > figure{
+  display: flex;
+  padding: 15px;
+}
+.fig_txt{
+  padding-left: 10px;
+  font-size: 13px;
+}
+.fig_txt > h3{
+  padding-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.fig_txt > span{
+  position: absolute;
+  bottom: 15px;right: 15px;
+}
+.more_btn_4 a{
+  margin-top: 20px;
+}
+
+#g_wrap > li:hover > a .fig_txt{
+  text-decoration: underline;
+}
+#g_wrap > li:hover > a .img_box > img{
+  transform: scale(1.2);
+}
+
+/* 마지막 콘텐츠 */
+
+.content_wrap{}
+.content_wrap > ul{
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  margin-bottom: 300px;
+}
+.content_wrap > ul > li{
+  border: 1px solid#fff;
+  width: 290px;height: 290px;
+  border-radius: 50%;
+  
+}
+.content_wrap > ul > li:hover{
+  border: 1px solid#6A1820;
+}
+.content_wrap > ul > li:hover > .circle{
+  background-color: #490f14;
+}
+.content_wrap > ul > li:hover img{
+  transform: translateY(-15px) scale(1.2);
+}
+.content_wrap .circle{
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background-color: #6A1820;
+  text-align: center;
+  transform: translate(6px,5px);
+}
+.content_wrap .circle a{
+  display: inline-block;
+  padding-top: 80px;
+}
+.content_wrap .circle a img{
+  width: 50px;
+  padding-bottom: 20px;
+  transition: 0.5s;
+}
+.content_wrap > ul > li:hover::before{
+  content:"";
+  display:block;
+  width: 52px;
+  height:32px;
+  background-image:url('../images/tri.png');
+  position: absolute;
+  bottom: -46px;
+  z-index: 10;
+}
+.content_wrap > ul > li:first-child:hover::before{
+  left: 170px;
+}
+
+.content_wrap > ul > li:nth-child(2):hover::before{
+  left: 580px;
+}
+
+.content_wrap > ul > li:last-child:hover::before{
+  right: 170px;
+}
+
+
+.content_wrap .circle a span{
+  font-size:18px;
+  color: #fff;
+  display: block;
+}
+.caption{
+  display: none;
+  width: 1200px;
+  height: 150px;
+  border: 1px solid #6A1820;
+  position: absolute;
+  left: 0px;top: 325px;
+  border-radius: 30px;
+  background-color: #fff;
+  z-index: 1;
+  
+}
+
+.content_wrap > ul > li:hover .caption{
+  display: block;
+}
+
+.caption > p{
+  font-size: 18px;
+  padding: 50px 0px 0px 40px;
+}
